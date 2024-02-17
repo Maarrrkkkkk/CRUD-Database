@@ -1,0 +1,109 @@
+body {
+    background-color: #333;
+    font-family: 'Century Gothic', sans-serif;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .button:hover {
+    background-color:#000;
+    color:white;
+  }
+  h5 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    border: solid 3px #000;
+}
+
+.card-body {
+    padding: 20px;
+    border-radius: 8px;
+    background-image: url('image15.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+  }
+  
+
+.card-title {
+    font-size: 26px;
+    font-weight: bold;
+    color:white;
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+    font-weight: 600;
+}
+
+table th {
+    font-weight: bold;
+    background-color: #f9004d;
+    text-transform: uppercase;
+    text-align: center;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+.pagination .page-item {
+    display: inline-block;
+    margin-right: 5px;
+}
+.pagination .page-link {
+    color: #000;
+    background-color: #0ef;
+    border: 1px solid #f9004d;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.pagination .page-link:hover,
+.pagination .page-link:focus {
+    color: #fff;
+    background-color: #000;
+    border-color: #f9004d;
+}
+p {
+    color:white;
+}

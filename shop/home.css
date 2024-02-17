@@ -1,0 +1,101 @@
+body {
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: 600;
+}
+.body-bg {
+  background-image: url('image2.jpeg');
+  background-size: cover; /* Resize the image to cover the entire background */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center;
+  background-attachment: fixed;
+}
+#static-text {
+  font-size: 32px;
+  margin-left: 8.5%;
+  letter-spacing: 7px;
+  color:#f9004d;
+}
+
+#dynamic-text {
+  font-size: 32px;
+  letter-spacing: 7px;
+  color: #0ef;
+  margin-top: 30px;
+  text-shadow: 0 0 20px #0ef,
+                 0 0 40px #0ef,
+                 0 0 60px #0ef,
+                 0 0 80px #0ef,
+                 0 0 100px #0ef,
+                 0 0 120px #0ef;
+}
+
+table {
+    max-width: 83%;
+    margin: 0 auto;
+    border: solid 1px black;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #myTable tr {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+  }
+
+
+  #myInput {
+    font-weight: bolder;
+    box-shadow: none;
+  }
+
+
+  h2 {
+    margin-left: 8%;
+    font-weight: bolder;
+  }
+  
+  @media (max-width: 768px) { /* adjust the breakpoint value to your liking */
+    table {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    h2 {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+  span.red {
+    color:#f9004d;
+    letter-spacing: 2px;
+}
+
+span.cyan {
+    color: #0ef;
+    letter-spacing: 2px;
+}
+.btn-group form {
+  margin-bottom: 3px; /* Adjust the distance between each button as needed */
+}
+
+.btn-group form button {
+  margin-right: 3px; /* Adjust the distance between the button and its adjacent element */
+}
+
+
+table.table thead th {
+  color: #f9004d;
+  background-color: #101010;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}

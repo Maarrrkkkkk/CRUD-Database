@@ -1,0 +1,32 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Perform backup operation
+    // This could involve creating a copy of files, exporting data from a database, etc.
+    // You can write the backup logic here or call a backup function
+    // For example, you could use the shell_exec() function to execute a backup shell command
+
+    // Example: Creating a backup file
+    $backupFileName = 'backup_' . date('Y-m-d_H-i-s') . '.zip';
+    $sourceDir = '/path/to/backup/files/';
+    $backupDir = '/path/to/store/backups/';
+
+    $backupFilePath = $backupDir . $backupFileName;
+
+    // Create a zip archive of the files
+    $zip = new ZipArchive();
+    if ($zip->open($backupFilePath, ZipArchive::CREATE | ZipArchive::OVERWRITE) === true) {
+        $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($sourceDir));
+        foreach ($files as $file) {
+            if (!$file->isDir()) {
+                $filePath = $file->getRealPath();
+                $relativePath = substr($filePath, strlen($sourceDir));
+                $zip->addFile($filePath, $relativePath);
+            }
+        }
+        $zip->close();
+
+        echo 'Backup created successfully!';
+    } else {
+        echo 'Failed to create backup.';
+    }
+}
